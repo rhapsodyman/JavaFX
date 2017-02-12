@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.PersonOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="153.0" layoutY="70.0" prefHeight="700.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TreeView fx:id="testsTreeView" prefHeight="298.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ChoiceBox fx:id="selectOS" layoutX="57.0" layoutY="42.0" prefHeight="25.0" prefWidth="95.0" />
+                  <ChoiceBox fx:id="selectBrowser" layoutX="231.0" layoutY="42.0" prefHeight="25.0" prefWidth="95.0" />
+                  <Label layoutX="30.0" layoutY="46.0" text="OS" />
+                  <Label layoutX="178.0" layoutY="46.0" text="Browser" />
+                  <ListView fx:id="selectedCombinations" layoutX="401.0" layoutY="42.0" prefHeight="200.0" prefWidth="142.0" />
+                  <ButtonBar layoutX="30.0" layoutY="92.0" prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button fx:id="buildTree" mnemonicParsing="false" text="Build" />
+                        <Button fx:id="addCombination" mnemonicParsing="false" text="ADD" />
+                        <Button fx:id="click" mnemonicParsing="false" text="Button" />
+                    </buttons>
+                  </ButtonBar>
+                  <TextArea fx:id="progress" layoutX="30.0" layoutY="275.0" prefHeight="329.0" prefWidth="511.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
